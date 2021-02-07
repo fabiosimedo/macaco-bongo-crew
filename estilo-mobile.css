@@ -1,0 +1,262 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pridi', serif;
+}
+html{
+  text-align: center;
+}
+p{
+  padding: 0 1rem;
+  text-align: left;
+}
+img{
+  width: 95%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  box-shadow: 0 0 .2rem black;
+}
+div.naveg{
+  margin: 0;
+  display: flex;
+}
+div.naveg img{
+  box-shadow: 0 0 0;
+  margin: 0;
+  width: 100%;
+}
+div.logo{
+  flex: 1 1 50%;
+}
+div.drop-d{
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+}
+div.naveg .a-nav-1{
+  background-color: black;
+  color: white;
+  font-size: 2rem;
+  margin-left: -2rem;
+  transition: opacity .7s;
+
+}
+.drop-d a:hover{
+  opacity: .5;
+}
+
+.visivel{
+  display: none;
+}
+
+/* menu secundário */
+ul.menu-links{
+  position: absolute;
+  height: auto;
+  width: 100%;
+  list-style: none;
+  background-color: black;
+}
+ul.menu-links a, ul.menu-links li{
+  color: white;
+  text-align: start;
+  margin: 0 1rem;
+  padding: .4rem 0;
+  transition: opacity .7s;
+}
+
+/* underlining */
+ul.menu-links li{
+  position: relative;
+}
+ul.menu-links a::after{
+  content: '';
+  border-radius: .2rem;
+  background-color: white;
+  position: absolute;
+  bottom: .3rem;
+  left: 0;
+  width: 0;
+  height: 0;
+  transition: width 1s, height 1s;
+
+}
+/* underlining */
+
+
+ul.menu-links a:hover::after{
+  width: 100%;
+  height: 10%;
+}
+
+ul.menu-links h1{
+  padding: .5rem 0;
+}
+.fechar{
+  outline: none;
+  border: white solid .1rem;
+  border-radius: .5rem;
+  color: white;
+  background-color: transparent;
+  padding: 0 .5rem;
+  font-size: 1.1rem;
+  transition: opacity .7s;
+}
+.fechar:hover{
+  opacity: .5;
+}
+ul.menu-links img{
+  margin: 0 auto;
+}
+/* menu secundário */
+
+div.dir-1, h1, ul{
+  padding: 2rem 0.3rem;
+}
+div.esq-1{
+  padding-bottom: 2rem;
+}
+div.dir-1{
+  padding-bottom: 3rem;
+}
+
+div.dir-2, h2{
+  padding: 2rem 0;
+}
+div.dir-2{
+  background-color: rgba(151, 133, 54, 0.425);
+}
+
+div.penult{
+  background-color: black;
+  padding-bottom: 1rem;
+}
+div.penult img{
+  border: solid white .3rem;
+}
+.penult-1{
+  background-color: white;
+}
+.penult-1 ul li{
+  text-decoration: underline;
+  margin: 1.5rem 0;
+}
+.penult-2 h2, .penult-2 p{
+  color: white;
+}
+p, ul li, a{
+  font-size: 1.2em;
+  color: black;
+  text-decoration: none;
+}
+div.foot-1 img{
+  width: 100%;
+}
+div.footer div.foot-2{
+  background-color: black;
+  text-align: initial;
+}
+div.foot-2 ul li{
+  list-style: none;
+  color: white;
+  margin: 0 1rem;
+}
+.rede-social{
+  display: flex;
+  justify-content: flex-end;
+}
+.rede-social img{
+  margin: 0 .3rem;
+  transition: opacity .7s;
+}
+.rede-social img:hover{
+  opacity: .5;
+}
+@media (min-width: 1024px) and (max-width: 1366px) {
+  div.naveg{
+    background-image: url('img/fael.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  div.logo{
+    flex: 1 1 20%;
+    margin: 2.8rem 0 0 .5rem;  
+  }
+  div.logo img{
+    border-radius: 2rem;
+  }
+  div.drop-d{
+    flex: 1 1 80%;
+    visibility: hidden;
+  }
+  /*  */
+  div.menu-2{
+    display: flex;
+    flex: 1 1 50%;
+  }
+  ul.menu-links{
+    display: flex;
+    padding: .5rem 0;
+    padding-left: 2rem;
+    background-color: transparent;
+    margin: 0 auto;
+    font-size: 1.3rem;
+  }
+  ul.menu-links h1, ul.menu-links button, ul.menu-links li img, ul.menu-links p{
+    display: none; 
+  }
+  div.section{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  div.section video{
+    width: 80%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  div.section div{
+    flex: 1 1 50%;
+  }
+  div.produtos{
+    display: flex;
+  }
+  div.produtos a{
+    flex: 1 1 30%;
+  }
+
+  div.penult-2 p{
+    text-align: center;
+  }
+  div.campeonatos{
+    display: flex;
+    justify-content: space-around;
+  }
+  div.campeonatos img{
+    width: 140%;
+  }
+  /* div.foot-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  } */
+  div.foot-1 img{
+    width: 40%;
+    height: auto;
+  }
+  div.foot-2{
+    display: flex;
+    justify-content: center;
+  }
+  div.rede-social{
+    margin: 5rem;
+  }
+
+
+
+
+}

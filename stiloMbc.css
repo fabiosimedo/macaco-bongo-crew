@@ -1,0 +1,238 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pridi', serif;
+}
+.naveg{
+  background-image: radial-gradient(rgb(255, 254, 254)70%, rgb(134, 134, 108), black);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.naveg .a-nav-1, .naveg .a-nav-2{
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  transition: .7s;
+}
+.naveg .a-nav-1:hover{
+  color: rgba(247, 8, 8, 0.9);
+}
+.naveg .a-nav-2:hover{
+  color: rgba(247, 8, 8, 0.9);
+}
+@media (max-width: 360px) {
+  .naveg{
+    max-width: 100%;
+    margin: auto; 
+  }
+  .logo-main{
+    max-width: 360px;
+    border-radius: 20%;
+    margin: 4rem  0 0 0;
+  }
+  .naveg .a-nav-1, .naveg .a-nav-2{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.233);
+    height: 3rem;
+    width: 100%;
+  }
+  .a-nav-1{
+    order: 2;
+    border-top: 1px solid white;
+  }
+}
+/* até aqui nav */
+
+div.main{
+  background-color: black;
+}
+section{
+  display: grid;
+  grid-template-areas: 
+  'e1 e1 d1'
+  'e1 e1 d2'
+  'pen pen pen'
+  'footer footer footer';
+}
+
+div.esq-1{
+  grid-area: e1;
+  height: 80vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 360px) {
+  .esq-1 video{
+    width: 98%;
+    /* height: auto; */
+  }
+}
+div.dir-1{
+  grid-area: d1;
+  height: 40vh;
+  background-image: linear-gradient(to left, black, white);
+  position: relative;
+}
+.dir-1 h1{
+  display: inline-block;
+  padding: 2rem 2rem;
+}
+.dir-1 p{
+  position: absolute;
+  top: 4rem;
+  width: 90%;
+  word-wrap: normal;
+  font-size: 1.1em;
+}
+.dir-1 p{
+  padding: 1rem;
+}
+@media (max-width: 360px) {
+  div.dir-1{
+    height: 70vh;
+  }
+  .dir-1 h1{
+    font-size: 2em;
+    padding: 1rem auto;
+  }
+  .dir-1 p{
+    font-size: 1.3em;
+    top: 6rem;
+  }
+}
+
+
+div.dir-2{
+  grid-area: d2;
+  height: 60vh;
+  background-color: rgba(160, 39, 39, 0.918);
+  box-shadow: 0 0 1rem #444;
+  margin-right: 1rem;
+  position: relative;
+  border-radius: .3rem;
+}
+.dir-2 h2{
+  font-size: 2em;
+  text-align: center;
+  padding: .5rem 0;
+  text-shadow: 0 0 .3rem rgb(99, 97, 97);
+}
+div.dir-2 .produtos{
+  width: 550px;
+  height: 46vh;
+  margin: .5rem auto 0 auto;
+  border-radius: .3rem;
+  /* background-image: url('camiseta.jpg');
+  background-repeat: no-repeat; */
+  background-color: white;
+}
+@media (max-width: 360px) {
+  div.dir-2 .produtos{
+    width: 90%;
+    height: 46vh;
+  }
+}
+
+div.penult{
+  grid-area: pen;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+div.penult h2{
+  display: inline-block;
+  color: white;
+  margin: 0 0 0 3rem;
+}
+.penult .penult-2 h2{
+  margin-top: 2rem;
+}
+div.penult div, div.footer div{
+  flex: 50%;
+  height: 40vh;
+}
+.penult-1 ul, ul li{
+  list-style: none;
+  margin: 2rem 3rem; 
+}
+.penult-1 ul, .penult-1 a{
+  color: white;
+}
+@media (max-width: 360px) {
+  .penult-1 ul{
+    margin: .5rem 1rem;
+  }
+  ul li{
+    margin: 2rem 0;
+  }
+}
+.penult-2 p{
+  color: white;
+  padding: .5rem 1rem;
+}
+
+div.footer{
+  grid-area: footer;
+  background-image: linear-gradient(to right, black, rgba(160, 39, 39, 0.918));
+  margin-left: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.foot-2 ul{
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (max-width: 360px) {
+  div.penult div, div.footer div{
+    flex: 100%;
+    margin: 2rem .5rem;
+  }
+}
+
+
+
+
+@media (max-width: 360px) {
+  body{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  section{
+    grid-template-areas: 
+  'e1'
+  'd1'
+  'd2'
+  'pen'
+  'footer';
+  }
+}
+
+
+
+.loogo{
+  width: 3rem;
+  position: fixed;
+  right: 1rem;
+  z-index: 1;
+} 
+.loogo a{
+  opacity: 1;
+  transition: 1s;
+}
+.loogo a:hover{
+  opacity: 0.5;
+}
+@media (max-width: 360px) {
+  .loogo{
+    right: .5rem;
+  }
+} 
