@@ -11,13 +11,14 @@ p{
   padding: 0 1rem;
   text-align: left;
 }
+
 img{
   width: 95%;
   height: auto;
   display: block;
   margin: 2rem auto;
-  box-shadow: 0 0 .2rem black;
 }
+
 div.naveg{
   margin: 0;
   display: flex;
@@ -120,15 +121,18 @@ div.dir-1, h1, ul{
 div.esq-1{
   padding-bottom: 2rem;
 }
+div.esq-1 h1{
+  background-image: linear-gradient(to top, white, rgba(0, 0, 0, 0.281));
+}
 div.dir-1{
   padding-bottom: 3rem;
+}
+div.dir-1{
+  color: tomato;
 }
 
 div.dir-2, h2{
   padding: 2rem 0;
-}
-div.dir-2{
-  background-color: rgba(151, 133, 54, 0.425);
 }
 
 div.penult{
@@ -181,16 +185,20 @@ div.foot-2 ul li{
     background-image: url('img/fael.jpeg');
     background-repeat: no-repeat;
     background-position: center;
+    max-width: 95%;
+    margin: 0 auto 0 auto;
   }
   div.logo{
     flex: 1 1 20%;
-    margin: 2.8rem 0 0 .5rem;  
+    margin: 1rem 0 0 0;
+    
+    overflow: hidden; 
   }
   div.logo img{
-    border-radius: 2rem;
+    border-radius: 25%;
   }
   div.drop-d{
-    flex: 1 1 80%;
+    flex: 1 1 75%;
     visibility: hidden;
   }
   /*  */
@@ -222,11 +230,41 @@ div.foot-2 ul li{
   div.section div{
     flex: 1 1 50%;
   }
-  div.produtos{
-    display: flex;
+  div.esq-1 h1{
+    background-image: radial-gradient(rgba(112, 108, 108, 0.295) 35%, rgba(255, 255, 255, 0.884) 55%);
+    transition: text-shadow 1s, transform 1s;
   }
-  div.produtos a{
-    flex: 1 1 30%;
+  div.esq-1 h1:hover{
+    text-shadow: 2px 2px 5px black;
+    transform: scale(.95);
+  }
+  div.dir-1{
+    padding: 0;
+  }
+  div.dir-1 p{
+    padding-top: 4rem;
+    padding-left: 0;
+  }
+  .dir-1 h1{
+    color: tomato;
+    transition: color 1s, transform 1s;
+  }
+  .dir-1 h1:hover{
+    color:rgba(255, 99, 71, 0.842); 
+    transform: scale(1.1); 
+  }
+/* /////////////////////////////////*/
+  div#carouselExampleDark img{
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: 2rem auto; 
+  }   
+
+/* /////////////////////////////////*/
+
+  div.patro img{
+    width: 20%;
   }
 
   div.penult-2 p{
@@ -248,6 +286,11 @@ div.foot-2 ul li{
     width: 40%;
     height: auto;
   }
+  div.foot-1 div p{
+    text-align: center;
+  }
+
+
   div.foot-2{
     display: flex;
     justify-content: center;
